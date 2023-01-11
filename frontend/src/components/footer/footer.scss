@@ -1,0 +1,10 @@
+.footer {
+  height: 60px;
+  background-color: $primary-color;
+
+  &_logo {
+    margin-top: 4px;
+    width: 4%;
+    margin-left: 1%;
+  }
+}
