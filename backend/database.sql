@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS `hackathon`.`vehicules` (
   `name` VARCHAR(100) NOT NULL,
   `kmH` INT NOT NULL,
   `url` VARCHAR(500) NOT NULL,
+  `dispo` BOOLEAN DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
