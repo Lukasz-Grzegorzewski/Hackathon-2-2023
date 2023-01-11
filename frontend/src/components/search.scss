@@ -1,0 +1,36 @@
+.adress_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 5%;
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    gap: 15px;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  .adress_container_form_btn {
+    width: 30%;
+  }
+
+  .result {
+    font-size: 25px;
+    margin: 2%;
+  }
+}

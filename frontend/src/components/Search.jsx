@@ -54,26 +54,32 @@ function Search() {
   }
 
   return (
-    <div>
-      <form onSubmit={latLong}>
-        <label htmlFor="adresse1">adresse 1</label>
+    <div className="adress_container">
+      <form className="adress_container_form" onSubmit={latLong}>
+        <label htmlFor="adresse1">D'où partez-vous?</label>
         <input
           type="text"
           id="adresse1"
           value={adresse1}
           onChange={(e) => setAdresse1(e.target.value)}
         />
-        <label htmlFor="adresse2">adresse 2</label>
+        <label htmlFor="adresse2">Où allez-vous?</label>
         <input
           type="text"
           id="adresse2"
           value={adresse2}
           onChange={(e) => setAdresse2(e.target.value)}
         />
-        <input type="submit" value="envoyer" />
+        <input
+          className="adress_container_form_btn"
+          type="submit"
+          value="envoyer"
+        />
       </form>
 
-      <div>{getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)} km</div>
+      <div className="result">
+        {getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)} km
+      </div>
     </div>
   );
 }
