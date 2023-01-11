@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -16,7 +15,6 @@ function App() {
       <Footer />
     </div>
   );
-
 }
 
 export default App;
