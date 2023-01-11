@@ -7,6 +7,16 @@ const getVehicules = (req, res) => {
     .catch((err) => console.error(err));
 };
 
+const getVehiculeById = (req, res) => {
+  const { id } = req.params;
+
+  vehiculesModel
+    .findVehicules(id)
+    .then(([vehicule]) => res.status(200).send(vehicule[0]))
+    .catch((err) => console.error(err));
+};
+
 module.exports = {
   getVehicules,
+  getVehiculeById,
 };
