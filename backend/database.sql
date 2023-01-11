@@ -7,11 +7,11 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema hackathon2
 -- -----------------------------------------------------
-CREATE hackathon IF NOT EXISTS `hackathon` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+CREATE SCHEMA IF NOT EXISTS `hackathon` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
 USE `hackathon` ;
 
 -- -----------------------------------------------------
--- Table `hackathon2`.`vehicules`
+-- Table `hackathon`.`vehicules`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `hackathon`.`vehicules` ;
 
@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS `hackathon`.`vehicules` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `kmH` INT NOT NULL,
+  `url` VARCHAR(500) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
@@ -26,12 +27,11 @@ DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 INSERT INTO
-  `origins_digital_wcs`.`category` (name)
+  `hackathon`.`vehicules` (name, kmH, url )
 VALUES
-  ( 'bicyclette', 8 ),
-  ( 'rollers', 6 ),
-  (  '2CV', 70 );
-
+  ( 'bicyclette', 8,'/assets/images/bicyclette.jpg' ),
+  ( 'rollers', 6, '/assets/images/rollers.jpg' ),
+  (  '2CV', 70, '/assets/images/2CV.jpg' );
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
