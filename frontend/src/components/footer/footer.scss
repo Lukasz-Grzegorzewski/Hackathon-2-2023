@@ -1,10 +1,11 @@
 .footer {
-  height: 60px;
+  height: 70px;
   background-color: $primary-color;
+  display: flex;
 
   &_logo {
-    margin-top: 4px;
     width: 4%;
     margin-left: 1%;
+    object-fit: contain;
   }
 }
