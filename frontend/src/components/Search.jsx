@@ -73,11 +73,9 @@ function Search() {
           onChange={(e) => setAdresse2(e.target.value)}
           required
         />
-        <input
-          className="adress_container_form_btn"
-          type="submit"
-          value="envoyer"
-        />
+        <button className="smooth" type="submit">
+          LET'S GO !
+        </button>
       </form>
 
       <div className="result">
