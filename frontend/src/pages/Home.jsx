@@ -4,7 +4,7 @@ import Vehicules from "@components/Vehicules";
 
 function Home() {
   return (
-    <div>
+    <div className="home">
       <Search />
       <Vehicules />
     </div>

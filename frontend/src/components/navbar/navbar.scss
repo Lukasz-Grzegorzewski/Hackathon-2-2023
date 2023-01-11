@@ -1,0 +1,22 @@
+.navbar {
+  height: 60px;
+  background-color: $primary-color;
+  padding: 1%;
+
+  &_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+
+    &_img {
+      width: 5%;
+    }
+
+    &_text {
+      font-family: $font-display;
+      font-size: 45px;
+      color: $secondary-color;
+    }
+  }
+}

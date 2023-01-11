@@ -1,3 +1,8 @@
 @import "./variables.scss";
 @import "./reset.scss";
 @import "./search.scss";
+
+@import "../../src/app.scss";
+@import "./navbar/navbar.scss";
+@import "./footer/footer.scss";
+@import "../pages/home.scss";
