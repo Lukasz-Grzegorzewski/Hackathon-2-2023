@@ -62,6 +62,7 @@ function Search() {
           id="adresse1"
           value={adresse1}
           onChange={(e) => setAdresse1(e.target.value)}
+          required
         />
         <label htmlFor="adresse2">Où allez-vous?</label>
         <input
@@ -69,6 +70,7 @@ function Search() {
           id="adresse2"
           value={adresse2}
           onChange={(e) => setAdresse2(e.target.value)}
+          required
         />
         <input
           className="adress_container_form_btn"
@@ -78,6 +80,8 @@ function Search() {
       </form>
 
       <div className="result">
+        {" "}
+        La distance entre les 2 adresses est de{" "}
         {getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)} km
       </div>
     </div>

@@ -1,4 +1,5 @@
 import Search from "@components/Search";
+import Vehicules from "@components/Vehicules";
 import Home from "./pages/Home";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <Home />
       <Search />
+      <Vehicules />
       <p>youhou</p>
     </div>
   );
