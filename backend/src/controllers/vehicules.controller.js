@@ -19,7 +19,7 @@ const getVehiculeById = (req, res) => {
 const postVehicule = (req, res) => {
   const { name, kmH, filename } = req.body;
 
-  const url = `/assets/videos/${filename}`;
+  const url = `/assets/images/${filename}`;
 
   vehiculesModel
     .uploadVehicule(name, kmH, url)
