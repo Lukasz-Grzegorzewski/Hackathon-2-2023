@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "@components/navbar/Navbar";
 import Footer from "@components/footer/Footer";
 import Flotte from "@pages/Flotte";
-import Race from "@components/flotte/Race";
 import Admin from "@pages/Admin";
 import Home from "./pages/Home";
 

@@ -24,7 +24,7 @@ function FleetPost({ getVehicules }) {
 
   const uploadAdd = (data) => {
     axios
-      .post(`${import.meta.env.VITE_PORT_BACKEND}/publicity`, data)
+      .post(`${import.meta.env.VITE_PORT_BACKEND}/vehicules`, data)
       .then(() => {
         setCheck(true);
         clearInputs();
