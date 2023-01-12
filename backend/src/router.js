@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 
 const router = express.Router();
@@ -19,8 +20,9 @@ const uploadImg = multer({ storage: storageImg });
 router.get("/vehicules", vehiculesControllers.getVehicules);
 router.get("/vehicules/:id", vehiculesControllers.getVehiculeById);
 router.post(
-  "/vehicules/",
+  "/vehicules",
   uploadImg.single("file"),
+  vehiculesControllers.removeBg,
   vehiculesControllers.postVehicule
 );
 router.put("/vehicules/:id", vehiculesControllers.patchVehiculeById);
