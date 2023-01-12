@@ -44,7 +44,7 @@ function Navbar() {
           to="/flotte"
         >
           <button type="button" className="multi-button_btn3">
-            Race
+            Flotte
           </button>
         </Link>
       </div>
