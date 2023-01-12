@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
+// import { motion } from "framer-motion";
 
 function Race({ raceVehicules }) {
   const [vehicules, setVehicules] = useState([]);
 
   function getVehicules(arrRaceVehicules) {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/vehicules`)
+      .get(`${import.meta.env.VITE_PORT_BACKEND}/vehicules`)
       .then((res) => {
         const arrTemp = [];
         arrRaceVehicules.forEach((element) => {
@@ -29,10 +30,10 @@ function Race({ raceVehicules }) {
     <div className="race-container">
       {vehicules &&
         vehicules.map((vehicule) => (
-          <div className="racers">
+          <div key={vehicule.id} className="racers">
             <img
               className="img-racer"
-              src={`${import.meta.env.VITE_BACKEND_URL}${vehicule.url}`}
+              src={`${import.meta.env.VITE_PORT_BACKEND}${vehicule.url}`}
               alt="racer"
             />
             <div className="track">
