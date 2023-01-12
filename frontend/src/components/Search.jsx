@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Vehicules from "./Vehicules";
+import Map from "./Map";
 
 function Search() {
   const [coord1, setCoord1] = useState([]);
@@ -14,7 +15,7 @@ function Search() {
     axios
       .get(`https://api-adresse.data.gouv.fr/search/?q=${adresse1}`)
       .then((res) => {
-        setCoord1(res.data.features[0].geometry.coordinates);
+        setCoord1(res.data.features[0].geometry.coordinates.reverse());
       })
       .catch((err) => {
         console.warn(err);
@@ -23,7 +24,7 @@ function Search() {
     axios
       .get(`https://api-adresse.data.gouv.fr/search/?q=${adresse2}`)
       .then((res) => {
-        setCoord2(res.data.features[0].geometry.coordinates);
+        setCoord2(res.data.features[0].geometry.coordinates.reverse());
       })
       .catch((err) => {
         console.warn(err);
@@ -77,7 +78,9 @@ function Search() {
           LET'S GO !
         </button>
       </form>
-
+      <div className="bob">
+        <Map coord1={coord1} coord2={coord2} />
+      </div>
       <div className="result">
         {" "}
         La distance entre les 2 adresses est de{" "}
