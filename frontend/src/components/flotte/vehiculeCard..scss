@@ -8,7 +8,7 @@
     .img-vehicule-card {
       height: 200px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.2);
+      background: $tertiary-color;
       border-radius: 16px;
       box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(5px);
@@ -37,7 +37,7 @@
   .vehicule-desc {
     font-size: 1.5rem;
     position: absolute;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(97, 96, 96, 0.2);
     border-radius: 16px;
     padding: 10px;
     box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3);

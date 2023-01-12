@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-function VehiculeCard({
-  vehicule,
-  handleActive,
-  //   isActive,
-  //   setIsActive,
-}) {
+function VehiculeCard({ vehicule, handleActive }) {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -15,14 +10,8 @@ function VehiculeCard({
         className="btnCard"
         type="button"
         onClick={() => {
-          //   console.log([...isActive, { id: id - 1, active: !active }]);
-          //   console.log(
-          //     "indexOf :",
-          //     isActive.indexOf((el) => el.id == id)
-          //   );
-          //   setIsActive([...isActive, { id, active: !active }]);
           setIsActive(!isActive);
-          handleActive(vehicule.id - 1);
+          handleActive(vehicule.id);
         }}
       >
         <img
@@ -50,5 +39,4 @@ VehiculeCard.propTypes = {
     url: PropTypes.string,
   }).isRequired,
   handleActive: PropTypes.func.isRequired,
-  //   setIsActive: PropTypes.func.isRequired,
 };

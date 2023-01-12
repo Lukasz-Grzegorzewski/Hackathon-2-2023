@@ -24,7 +24,7 @@ function Vehicules({ distance }) {
 
   return (
     <div className="vehicule">
-      <button type="button" onClick={getVehicule}>
+      <button className="shake" type="button" onClick={getVehicule}>
         Voir les véhicules disponible
       </button>
       <div>
