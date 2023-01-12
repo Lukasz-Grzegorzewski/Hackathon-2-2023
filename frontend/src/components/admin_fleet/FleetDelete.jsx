@@ -2,12 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function FleetDelete({ vehicules, getVehicules }) {
-  return (
-    <div>
-      {vehicules}
-      {getVehicules}
-    </div>
-  );
+  return <div />;
 }
 
 export default FleetDelete;

@@ -2,15 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function FleetUpdate({ vehicules, getVehicules }) {
-  return (
-    <div>
-      {vehicules}
-      {getVehicules}
-    </div>
-  );
+  return <div />;
 }
-
-export default FleetUpdate;
 
 FleetUpdate.propTypes = {
   vehicules: PropTypes.arrayOf(
@@ -24,3 +17,5 @@ FleetUpdate.propTypes = {
   ).isRequired,
   getVehicules: PropTypes.func.isRequired,
 };
+
+export default FleetUpdate;
