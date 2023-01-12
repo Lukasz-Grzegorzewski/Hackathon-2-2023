@@ -34,7 +34,7 @@ function Flotte() {
 
   function getVehicules() {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/vehicules`)
+      .get(`${import.meta.env.VITE_PORT_BACKEND}/vehicules`)
       .then((res) => {
         setVehicules(res.data);
       })

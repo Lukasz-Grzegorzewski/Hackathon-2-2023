@@ -1,0 +1,24 @@
+GET http://localhost:5000/vehicules
+Content-type: application/json
+
+###
+
+POST http://localhost:5000/vehicules
+Content-type: application/json
+
+{
+  "name": "Lucasopdmode",
+  "kmH": 10,
+  "url": "/assets/images/bicyclette.jpg"
+}
+
+###
+
+PUT http://localhost:5000/vehicules/1
+Content-type: application/json
+
+{
+  "name": "Lucasopdmodle",
+  "kmH": 10,
+  "dispo": 0
+}
