@@ -21,11 +21,15 @@ function Flotte() {
 
   function getVehicules() {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/vehicules`)
+      .get(`${import.meta.env.VITE_PORT_BACKEND}/vehicules`)
       .then((res) => {
         setVehicules(res.data);
       })
       .catch((err) => console.error(err));
+  }
+
+  function getVehiculeName(id) {
+    return vehicules[id - 1].name;
   }
 
   useEffect(() => {
@@ -36,16 +40,16 @@ function Flotte() {
     vehicules && (
       <div className="flotte">
         <div className="list-and-raceBtn-container">
-          <NavLink className="btn-race">
+          <NavLink to="/race" className="btn-race">
             <button type="button" className="stripe">
               Race!
-            </button>{" "}
+            </button>
           </NavLink>
           {raceVehicules.length > 0 && vehicules.length > 0 && (
             <div className="race-list-container">
               <div className="race-list">
                 {raceVehicules.map((el) => (
-                  <p key={crypto.randomUUID()}>{el}</p>
+                  <p key={crypto.randomUUID()}>{getVehiculeName(el)}</p>
                 ))}
               </div>
             </div>

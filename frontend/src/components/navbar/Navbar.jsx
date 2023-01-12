@@ -5,10 +5,17 @@ import logo from "../../assets/logo.png";
 function Navbar() {
   return (
     <div className="navbar">
-      <div className="navbar_logo">
+      <Link
+        className="navbar_logo"
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+        to="/"
+      >
         <img className="navbar_logo_img" src={logo} alt="logo" />
         <p className="navbar_logo_text">Let's Go !</p>
-      </div>
+      </Link>
+
       <div className="multi-button">
         <Link
           onClick={() => {
@@ -24,7 +31,7 @@ function Navbar() {
           onClick={() => {
             window.scrollTo(0, 0);
           }}
-          to="/"
+          to="/admin"
         >
           <button type="button" className="multi-button_btn2">
             Admin
@@ -34,7 +41,7 @@ function Navbar() {
           onClick={() => {
             window.scrollTo(0, 0);
           }}
-          to="/"
+          to="/flotte"
         >
           <button type="button" className="multi-button_btn3">
             Race
