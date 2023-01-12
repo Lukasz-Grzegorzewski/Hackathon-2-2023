@@ -31,7 +31,7 @@ function Navbar() {
           onClick={() => {
             window.scrollTo(0, 0);
           }}
-          to="/"
+          to="/admin"
         >
           <button type="button" className="multi-button_btn2">
             Admin

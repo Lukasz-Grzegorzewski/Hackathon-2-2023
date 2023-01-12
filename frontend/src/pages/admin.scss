@@ -1,0 +1,8 @@
+@import "../components/admin_fleet/fleetDelete.scss";
+@import "../components/admin_fleet/fleetPost.scss";
+@import "../components/admin_fleet/fleetUpdate.scss";
+
+.admin {
+  background-color: $secondary-color;
+  min-height: 650px;
+}
