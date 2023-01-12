@@ -30,9 +30,12 @@ COLLATE = utf8mb4_0900_ai_ci;
 INSERT INTO
   `hackathon`.`vehicules` (name, kmH, url )
 VALUES
-  ( 'bicyclette', 8,'/assets/images/bicyclette.jpg' ),
-  ( 'rollers', 6, '/assets/images/rollers.jpg' ),
-  (  '2CV', 70, '/assets/images/2CV.jpg' );
+  ( 'trotinete', 10,'/assets/images/removedBG/trotinete.png' ),
+  ( 'bike-1', 40,'/assets/images/removedBG/bike-1.jpeg' ),
+  ( 'car-blue-2', 110, '/assets/images/removedBG/car-blue-2.jpg' ),
+  ( 'car-blue-1', 120, '/assets/images/removedBG/car-blue-1.jpeg' ),
+  ( 'car-red-1', 150, '/assets/images/removedBG/car-red-1.jpeg' ),
+  ( 'scateboard', 15, '/assets/images/removedBG/scateboard.jpeg' );
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
