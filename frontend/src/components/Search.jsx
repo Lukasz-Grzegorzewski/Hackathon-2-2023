@@ -83,7 +83,7 @@ function Search() {
       </div>
       <div className="result">
         {" "}
-        La distance entre les 2 adresses est de{" "}
+        La distance entre les 2 adresses est de
         {getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)} km
       </div>
       <Vehicules distance={getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)} />

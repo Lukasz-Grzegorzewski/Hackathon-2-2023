@@ -9,12 +9,23 @@
   }
 
   &_card {
-    font-size: 15px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     gap: 15px;
+    padding: 4%;
+
+    &_detail {
+      background-color: $tertiary-color;
+      border-radius: 15px;
+    }
+
+    &_name,
+    &_kmH,
+    &_temps {
+      margin: 10px;
+      font-size: 1.5rem;
+    }
 
     &_img {
       width: 350px;
