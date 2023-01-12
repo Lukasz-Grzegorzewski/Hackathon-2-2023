@@ -27,7 +27,7 @@ function VehiculeCard({
       >
         <img
           className="img-vehicule-card"
-          src={`${import.meta.env.VITE_BACKEND_URL}${vehicule.url}`}
+          src={`${import.meta.env.VITE_PORT_BACKEND}${vehicule.url}`}
           alt="vehicule"
         />
         <div className={isActive ? "icon active" : "icon"} />
