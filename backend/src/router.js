@@ -24,5 +24,6 @@ router.post(
   vehiculesControllers.postVehicule
 );
 router.put("/vehicules/:id", vehiculesControllers.patchVehiculeById);
+router.delete("/vehicules/:id", vehiculesControllers.deleteVehiculeById);
 
 module.exports = router;
