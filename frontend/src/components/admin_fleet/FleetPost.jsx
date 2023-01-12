@@ -13,8 +13,7 @@ function FleetPost({ getVehicules }) {
 
   function clearInputs() {
     setImgDetails({
-      description: "",
-      urlLink: "",
+      kmH: "",
       name: "",
     });
   }
@@ -24,7 +23,7 @@ function FleetPost({ getVehicules }) {
 
   const uploadAdd = (data) => {
     axios
-      .post(`${import.meta.env.VITE_PORT_BACKEND}/vehicules`, data)
+      .post(`${import.meta.env.VITE_PORT_BACKEND}/vehicules/`, data)
       .then(() => {
         setCheck(true);
         clearInputs();
@@ -40,7 +39,7 @@ function FleetPost({ getVehicules }) {
     e.preventDefault();
     const data = new FormData();
     data.append("name", imgDetails.name);
-    data.append("urlLink", imgDetails.kmH);
+    data.append("kmH", imgDetails.kmH);
     data.append("file", file);
     uploadAdd(data);
   };
@@ -91,7 +90,7 @@ function FleetPost({ getVehicules }) {
           <input
             className="addadvert_form_container_input"
             type="text"
-            id="urlLink"
+            id="kmH"
             value={imgDetails.urlLink}
             placeholder="Enter the link"
             onChange={(e) =>

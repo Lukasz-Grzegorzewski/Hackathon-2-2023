@@ -22,9 +22,14 @@ const modifyVehiculeById = (name, kmH, dispo, id) => {
   );
 };
 
+const eraseVehicule = (id) => {
+  return database.query("DELETE FROM vehicules WHERE id = ?", [id]);
+};
+
 module.exports = {
   findVehicules,
   findVehiculeById,
   uploadVehicule,
   modifyVehiculeById,
+  eraseVehicule,
 };
