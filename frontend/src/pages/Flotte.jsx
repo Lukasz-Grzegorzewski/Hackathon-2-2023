@@ -28,6 +28,10 @@ function Flotte() {
       .catch((err) => console.error(err));
   }
 
+  function getVehiculeName(id) {
+    return vehicules[id - 1].name;
+  }
+
   useEffect(() => {
     getVehicules();
   }, [raceVehicules]);
@@ -45,7 +49,7 @@ function Flotte() {
             <div className="race-list-container">
               <div className="race-list">
                 {raceVehicules.map((el) => (
-                  <p key={crypto.randomUUID()}>{el}</p>
+                  <p key={crypto.randomUUID()}>{getVehiculeName(el)}</p>
                 ))}
               </div>
             </div>
