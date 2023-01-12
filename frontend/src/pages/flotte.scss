@@ -1,0 +1,72 @@
+@import "../components/flotte/vehiculeCard..scss";
+
+.flotte {
+  position: relative;
+  padding: 20px 80px 20px 0;
+  min-height: 100vh;
+  background-color: $secondary-color;
+  .list-and-raceBtn-container {
+    position: fixed;
+    top: 80px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+
+    .race-list-container {
+      display: flex;
+      align-items: center;
+
+      .race-list {
+        border: 1px solid $tertiary-color;
+        padding: 20px;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    .btn-race {
+      // margin-left: calc(100vw - 180px);
+      z-index: 2;
+      // padding: 24px 32px;
+      // height: 15px;
+      // border: 0;
+      // text-decoration: none;
+      // border-radius: 15px;
+      // background-color: rgba(255, 255, 255, 0.289);
+      // border: 1px solid rgba(255, 255, 255, 0.1);
+      // backdrop-filter: blur(30px);
+      // font-size: 14px;
+      // letter-spacing: 2px;
+      // cursor: pointer;
+      // text-transform: uppercase;
+    }
+    // .btn-race:hover {
+    //   background-color: rgba(255, 255, 255, 0.2);
+    // }
+    //   text-align: center;
+    // background: rgb(215, 212, 255);
+    // background: linear-gradient(
+    //   118deg,
+    //   rgba(215, 212, 255, 1) 1%,
+    //   rgba(255, 201, 201, 1) 38%,
+    //   rgba(255, 205, 205, 1) 57%,
+    //   rgba(255, 168, 240, 1) 87%,
+    //   rgba(255, 148, 230, 1) 100%
+    // );
+  }
+  .title-flotte {
+    margin: 70px 0 0 50px;
+    font-size: 5rem;
+  }
+
+  .flotte-cards {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 6% 8% 8% 8%;
+  }
+}

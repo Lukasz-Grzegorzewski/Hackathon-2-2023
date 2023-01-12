@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Vehicules from "./Vehicules";
+import Map from "./Map";
 
 function Search() {
   const [coord1, setCoord1] = useState([]);
@@ -13,7 +15,7 @@ function Search() {
     axios
       .get(`https://api-adresse.data.gouv.fr/search/?q=${adresse1}`)
       .then((res) => {
-        setCoord1(res.data.features[0].geometry.coordinates);
+        setCoord1(res.data.features[0].geometry.coordinates.reverse());
       })
       .catch((err) => {
         console.warn(err);
@@ -22,7 +24,7 @@ function Search() {
     axios
       .get(`https://api-adresse.data.gouv.fr/search/?q=${adresse2}`)
       .then((res) => {
-        setCoord2(res.data.features[0].geometry.coordinates);
+        setCoord2(res.data.features[0].geometry.coordinates.reverse());
       })
       .catch((err) => {
         console.warn(err);
@@ -72,18 +74,19 @@ function Search() {
           onChange={(e) => setAdresse2(e.target.value)}
           required
         />
-        <input
-          className="adress_container_form_btn"
-          type="submit"
-          value="envoyer"
-        />
+        <button className="smooth" type="submit">
+          LET'S GO !
+        </button>
       </form>
-
+      <div className="bob">
+        <Map coord1={coord1} coord2={coord2} />
+      </div>
       <div className="result">
         {" "}
         La distance entre les 2 adresses est de{" "}
         {getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)} km
       </div>
+      <Vehicules distance={getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)} />
     </div>
   );
 }
