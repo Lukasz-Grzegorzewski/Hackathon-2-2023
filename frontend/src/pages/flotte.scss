@@ -1,6 +1,7 @@
 @import "../components/flotte/vehiculeCard..scss";
 
 .flotte {
+  position: relative;
   padding: 20px 80px 20px 0;
   min-height: 100vh;
   //   text-align: center;
@@ -26,7 +27,7 @@
     padding: 6% 8% 8% 8%;
   }
   .race-list-container {
-    position: fixed;
+    position: absolute;
     right: 150px;
     top: 10px;
     display: flex;

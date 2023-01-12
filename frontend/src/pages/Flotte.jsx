@@ -6,10 +6,17 @@ import { NavLink } from "react-router-dom";
 function Flotte() {
   const [vehicules, setVehicules] = useState([]);
   const [raceVehicules, setRaceVehicules] = useState([]);
-  //   const [isActive, setIsActive] = useState([]);
 
   function handleActive(id) {
-    setRaceVehicules((prev) => [...prev, id]);
+    if (raceVehicules.includes(id)) {
+      const index = raceVehicules.indexOf(id);
+      if (index > -1) {
+        raceVehicules.splice(index, 1);
+      }
+      setRaceVehicules((prev) => [...prev.filter((el) => el !== id)]);
+    } else {
+      setRaceVehicules((prev) => [...prev, id]);
+    }
   }
 
   function getVehicules() {
@@ -34,8 +41,6 @@ function Flotte() {
             <VehiculeCard
               key={item.id}
               vehicule={item}
-              //   isActive={isActive}
-              //   setIsActive={setIsActive}
               handleActive={() => handleActive(item.id)}
             />
           ))}
@@ -56,11 +61,3 @@ function Flotte() {
 }
 
 export default Flotte;
-
-// console.log("isActive :", isActive[0]);
-// if (raceVehicules.includes(id - 1) && isActive) {
-//   const index = raceVehicules.indexOf(id);
-//   raceVehicules.splice(index, 1);
-// } else {
-//   setRaceVehicules([...raceVehicules, id - 1]);
-// }
