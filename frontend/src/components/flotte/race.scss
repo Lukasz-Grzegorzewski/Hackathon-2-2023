@@ -1,0 +1,37 @@
+.race-container {
+  margin: 10px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: #f9bda3ed;
+
+  .racers {
+    position: relative;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+
+    .img-racer {
+      position: absolute;
+      bottom: -20px;
+      width: 130px;
+      z-index: 3;
+    }
+
+    .track {
+      position: absolute;
+      bottom: 0;
+      width: 80vw;
+      height: 50px;
+      background-color: rgb(143, 143, 143);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .lines {
+        width: 100%;
+        border-bottom: 1px dashed white;
+      }
+    }
+  }
+}

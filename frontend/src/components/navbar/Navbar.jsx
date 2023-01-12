@@ -34,10 +34,10 @@ function Navbar() {
           onClick={() => {
             window.scrollTo(0, 0);
           }}
-          to="/"
+          to="/flotte"
         >
           <button type="button" className="multi-button_btn3">
-            Race
+            Flotte
           </button>
         </Link>
       </div>
