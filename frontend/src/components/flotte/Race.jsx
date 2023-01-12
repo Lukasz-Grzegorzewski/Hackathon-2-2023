@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Race({ raceVehicules }) {
   const [vehicules, setVehicules] = useState([]);
@@ -31,7 +31,8 @@ function Race({ raceVehicules }) {
       {vehicules &&
         vehicules.map((vehicule) => (
           <div key={vehicule.id} className="racers">
-            <img
+            <motion.img
+              animate={{ rotate: [0, 200, 200, 0], x: [0, 200, 200, 0] }}
               className="img-racer"
               src={`${import.meta.env.VITE_PORT_BACKEND}${vehicule.url}`}
               alt="racer"
