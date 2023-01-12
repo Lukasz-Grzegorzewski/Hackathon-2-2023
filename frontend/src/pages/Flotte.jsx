@@ -40,10 +40,10 @@ function Flotte() {
     vehicules && (
       <div className="flotte">
         <div className="list-and-raceBtn-container">
-          <NavLink className="btn-race">
+          <NavLink to="/race" className="btn-race">
             <button type="button" className="stripe">
               Race!
-            </button>{" "}
+            </button>
           </NavLink>
           {raceVehicules.length > 0 && vehicules.length > 0 && (
             <div className="race-list-container">
