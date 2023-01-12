@@ -35,6 +35,22 @@ function Flotte() {
   return (
     vehicules && (
       <div className="flotte">
+        <div className="list-and-raceBtn-container">
+          <NavLink className="btn-race">
+            <button type="button" className="stripe">
+              Race!
+            </button>{" "}
+          </NavLink>
+          {raceVehicules.length > 0 && vehicules.length > 0 && (
+            <div className="race-list-container">
+              <div className="race-list">
+                {raceVehicules.map((el) => (
+                  <p key={crypto.randomUUID()}>{el}</p>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
         <p className="title-flotte">Flotte</p>
         <div className="flotte-cards">
           {vehicules.map((item) => (
@@ -45,16 +61,6 @@ function Flotte() {
             />
           ))}
         </div>
-        {raceVehicules.length > 0 && vehicules.length > 0 && (
-          <div className="race-list-container">
-            <div className="race-list">
-              {raceVehicules.map((el) => (
-                <p key={crypto.randomUUID()}>{el}</p>
-              ))}
-            </div>
-          </div>
-        )}
-        <NavLink className="btn-race">Race!</NavLink>
       </div>
     )
   );
