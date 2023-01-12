@@ -1,0 +1,15 @@
+.vehicule {
+  button {
+    font-size: 15px;
+  }
+
+  &_card {
+    font-size: 15px;
+    display: flex;
+
+    &_img {
+      width: 350px;
+      height: 250px;
+    }
+  }
+}

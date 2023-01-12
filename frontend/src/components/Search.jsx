@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Vehicules from "./Vehicules";
 
 function Search() {
   const [coord1, setCoord1] = useState([]);
@@ -72,11 +73,9 @@ function Search() {
           onChange={(e) => setAdresse2(e.target.value)}
           required
         />
-        <input
-          className="adress_container_form_btn"
-          type="submit"
-          value="envoyer"
-        />
+        <button className="smooth" type="submit">
+          LET'S GO !
+        </button>
       </form>
 
       <div className="result">
@@ -84,6 +83,7 @@ function Search() {
         La distance entre les 2 adresses est de{" "}
         {getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)} km
       </div>
+      <Vehicules distance={getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)} />
     </div>
   );
 }

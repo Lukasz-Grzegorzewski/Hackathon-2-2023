@@ -2,17 +2,18 @@ import Flotte from "@pages/Flotte";
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
+import Navbar from "@components/navbar/Navbar";
+import Footer from "@components/footer/Footer";
 import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/flotte" element={<Flotte />} />
-        </Routes>
-      </BrowserRouter>
+    <div className="app">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
