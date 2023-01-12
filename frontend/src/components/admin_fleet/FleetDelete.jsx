@@ -2,10 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function FleetDelete({ vehicules, getVehicules }) {
-  return <div />;
+  return (
+    <div>
+      <div>{vehicules}</div>
+      <div>{getVehicules}</div>
+    </div>
+  );
 }
-
-export default FleetDelete;
 
 FleetDelete.propTypes = {
   vehicules: PropTypes.arrayOf(
@@ -19,3 +22,5 @@ FleetDelete.propTypes = {
   ).isRequired,
   getVehicules: PropTypes.func.isRequired,
 };
+
+export default FleetDelete;

@@ -2,7 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function FleetUpdate({ vehicules, getVehicules }) {
-  return <div />;
+  return (
+    <div>
+      <div>{vehicules}</div>
+      <div>{getVehicules}</div>
+    </div>
+  );
 }
 
 FleetUpdate.propTypes = {
