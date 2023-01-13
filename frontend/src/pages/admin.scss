@@ -1,8 +1,21 @@
-@import "../components/admin_fleet/fleetDelete.scss";
 @import "../components/admin_fleet/fleetPost.scss";
 @import "../components/admin_fleet/fleetUpdate.scss";
+@import "../components/admin_fleet/popupAdvert.scss";
+@import "../components/admin_fleet/deleteAdvert.scss";
 
 .admin {
   background-color: $secondary-color;
   min-height: 650px;
+
+  &_comp {
+    display: flex;
+    flex-direction: column;
+
+    &_title {
+      font-family: $font-display;
+      font-size: 30px;
+      margin-top: 2%;
+      margin-left: 2%;
+    }
+  }
 }

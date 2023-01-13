@@ -31,7 +31,7 @@ function Vehicules({ distance }) {
         {displayVehicule.length > 0 && (
           <div className="vehicule_card">
             {displayVehicule.map((v) => (
-              <div key={v.id}>
+              <div className="vehicule_card_detail" key={v.id}>
                 <div className="vehicule_card_name">{v.name}</div>
                 <div className="vehicule_card_kmH">{v.kmH} km/h</div>
                 <img
@@ -39,7 +39,9 @@ function Vehicules({ distance }) {
                   src={vehiculeUrl + v.url}
                   alt="vehicule"
                 />
-                <div>temps de trajet estimé : {temps(v.kmH)} min</div>
+                <div className="vehicule_card_temps">
+                  temps de trajet estimé : {temps(v.kmH)} min
+                </div>
               </div>
             ))}
           </div>

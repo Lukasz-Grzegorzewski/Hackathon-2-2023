@@ -6,15 +6,21 @@
   width: 100%;
   height: auto;
   gap: 5%;
+  padding: 2%;
 
   &_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 50%;
     height: auto;
     gap: 15px;
+    margin: 2%;
+
+    input {
+      border-radius: 10px;
+    }
   }
 
   .bob {

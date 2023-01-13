@@ -1,3 +1,4 @@
+const { removeBackgroundFromImageFile } = require("remove.bg");
 const vehiculesModel = require("../models/vehicules.model");
 
 const getVehicules = (req, res) => {
@@ -19,7 +20,9 @@ const getVehiculeById = (req, res) => {
 const postVehicule = (req, res) => {
   const { name, kmH, filename } = req.body;
 
-  const url = `/assets/images/${filename}`;
+
+  const url = `/assets/images/removedBG/${filename}`;
+
 
   vehiculesModel
     .uploadVehicule(name, kmH, url)
@@ -34,6 +37,31 @@ const postVehicule = (req, res) => {
 
     .catch((err) => console.warn(err));
 };
+
+function removeBg(req, res, next) {
+  const { filename } = req.body;
+
+  const localFile = `${__dirname}/../../public/assets/images/${filename}`;
+  const outputFile = `${__dirname}/../../public/assets/images/removedBG/${
+    localFile.split("images/")[1]
+  }`;
+
+  removeBackgroundFromImageFile({
+    path: localFile,
+    // apiKey: `${process.env.API_KEY}`,
+    apiKey: "nUf1hs1uh6GP46LyhXS2Cc5j",
+    size: "regular",
+    type: "auto",
+    scale: "50%",
+    outputFile,
+  })
+    .then(() => {
+      next();
+    })
+    .catch((errors) => {
+      console.error(JSON.stringify(errors));
+    });
+}
 
 const patchVehiculeById = (req, res) => {
   const id = parseInt(req.params.id, 10);
@@ -75,4 +103,5 @@ module.exports = {
   postVehicule,
   patchVehiculeById,
   deleteVehiculeById,
+  removeBg,
 };
