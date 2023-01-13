@@ -16,7 +16,7 @@ function Vehicules({ distance }) {
       });
   };
 
-  const vehiculeUrl = `${import.meta.env.VITE_PORT_BACKEND}`;
+  const vehiculeUrl = `${import.meta.env.VITE_PORT_BACKEND}/`;
 
   const temps = (v) => {
     return Number.parseFloat((distance / v) * 60).toFixed(1);
