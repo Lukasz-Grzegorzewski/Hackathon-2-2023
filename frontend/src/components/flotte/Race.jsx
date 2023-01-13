@@ -43,7 +43,10 @@ function Race({ raceVehicules }) {
             >
               <motion.img
                 animate={{ rotate: [0, 600], y: [0, 1000] }}
-                transition={{ delay: (1 / vehicule.kmH) * 1000, duration: 3 }}
+                transition={{
+                  delay: (1 / vehicule.kmH) * 950 + vehicule.kmH / 100 / 10,
+                  duration: 3,
+                }}
                 className="img-racer"
                 src={`${import.meta.env.VITE_PORT_BACKEND}${vehicule.url}`}
                 alt="racer"
