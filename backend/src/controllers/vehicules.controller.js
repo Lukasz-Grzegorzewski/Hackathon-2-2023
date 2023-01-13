@@ -63,9 +63,9 @@ function removeBg(req, res, next) {
 
 const patchVehiculeById = (req, res) => {
   const id = parseInt(req.params.id, 10);
-  const { name, kmH, dispo } = req.body;
+  const { name, kmH } = req.body;
   vehiculesModel
-    .modifyVehiculeById(name, kmH, dispo, id)
+    .modifyVehiculeById(name, kmH, id)
     .then(([result]) => {
       return result.affectedRows === 0
         ? res.status(404).send("Vehicule Not Found")

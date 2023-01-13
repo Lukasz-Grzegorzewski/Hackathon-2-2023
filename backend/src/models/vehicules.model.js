@@ -15,11 +15,12 @@ const uploadVehicule = (name, kmH, url) => {
   );
 };
 
-const modifyVehiculeById = (name, kmH, dispo, id) => {
-  return database.query(
-    `UPDATE vehicules SET name = ?, kmH = ?, dispo = ? WHERE id = ?`,
-    [name, kmH, dispo, id]
-  );
+const modifyVehiculeById = (name, kmH, id) => {
+  return database.query(`UPDATE vehicules SET name = ?, kmH = ? WHERE id = ?`, [
+    name,
+    kmH,
+    id,
+  ]);
 };
 
 const eraseVehicule = (id) => {
