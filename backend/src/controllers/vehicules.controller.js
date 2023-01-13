@@ -20,9 +20,7 @@ const getVehiculeById = (req, res) => {
 const postVehicule = (req, res) => {
   const { name, kmH, filename } = req.body;
 
-
   const url = `/assets/images/removedBG/${filename}`;
-
 
   vehiculesModel
     .uploadVehicule(name, kmH, url)
