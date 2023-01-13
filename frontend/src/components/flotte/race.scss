@@ -1,5 +1,5 @@
 .race-container {
-  margin: 10px;
+  margin: 10px 100px 10px 10px;
   padding-bottom: 30px;
   border-radius: 20px;
   backdrop-filter: blur(5px);
@@ -12,17 +12,44 @@
     display: flex;
     flex-direction: column;
 
-    .img-racer {
-      position: absolute;
-      bottom: -20px;
-      width: 130px;
-      z-index: 3;
+    .info-container {
+      margin-top: 30px;
+      width: 100px;
+      font-size: 1.5rem;
+      // position: absolute;
+      background: rgba(97, 96, 96, 0.2);
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      // left: 5px;
+      // top: 5px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .vehicule-kmh {
+        font-weight: 900;
+        font-size: 1.9rem;
+      }
+    }
+    .spec {
+      position: relative;
+      z-index: 2;
+      .img-racer {
+        position: absolute;
+        bottom: -70px;
+        width: 130px;
+        z-index: 3;
+      }
     }
 
     .track {
       position: absolute;
       bottom: 0;
-      width: 80vw;
+      width: 100%;
       height: 50px;
       background-color: rgb(143, 143, 143);
       display: flex;
