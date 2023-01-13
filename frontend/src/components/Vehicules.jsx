@@ -7,7 +7,7 @@ function Vehicules({ distance }) {
 
   const getVehicule = () => {
     axios
-      .get(`http://localhost:5000/vehicules`)
+      .get(`${import.meta.env.VITE_PORT_BACKEND}/vehicules`)
       .then((res) => {
         setDisplayVehicule(res.data);
       })
@@ -16,7 +16,7 @@ function Vehicules({ distance }) {
       });
   };
 
-  const vehiculeUrl = `http://localhost:5000/`;
+  const vehiculeUrl = `${import.meta.env.VITE_PORT_BACKEND}`;
 
   const temps = (v) => {
     return Number.parseFloat((distance / v) * 60).toFixed(1);
