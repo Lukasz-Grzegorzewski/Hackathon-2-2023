@@ -22,6 +22,7 @@ function Race({ raceVehicules }) {
       .catch((err) => console.error(err));
   }
 
+  const width = document.body.clientWidth;
   useEffect(() => {
     getVehicules(raceVehicules);
   }, []);
@@ -31,12 +32,23 @@ function Race({ raceVehicules }) {
       {vehicules &&
         vehicules.map((vehicule) => (
           <div key={vehicule.id} className="racers">
-            <motion.img
-              animate={{ rotate: [0, 200, 200, 0], x: [0, 200, 200, 0] }}
-              className="img-racer"
-              src={`${import.meta.env.VITE_PORT_BACKEND}${vehicule.url}`}
-              alt="racer"
-            />
+            <div className="info-container">
+              <p className="vehicule-name">{vehicule.name}</p>
+              <p className="vehicule-kmh">{vehicule.kmH} km/h</p>
+            </div>
+            <motion.div
+              animate={{ x: [0, width - 110], y: [0, 0] }}
+              transition={{ delay: 1, duration: (1 / vehicule.kmH) * 1000 }}
+              className="spec"
+            >
+              <motion.img
+                animate={{ rotate: [0, 600], y: [0, 1000] }}
+                transition={{ delay: (1 / vehicule.kmH) * 1000, duration: 3 }}
+                className="img-racer"
+                src={`${import.meta.env.VITE_PORT_BACKEND}${vehicule.url}`}
+                alt="racer"
+              />
+            </motion.div>
             <div className="track">
               <div className="lines" />
             </div>
