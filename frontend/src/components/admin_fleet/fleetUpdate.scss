@@ -1,0 +1,49 @@
+.update_vehicules {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  gap: 5px;
+
+  &_title {
+    margin: 1% 2%;
+  }
+
+  &_selection {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 1% 5%;
+  }
+
+  &_select {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 15px;
+    height: 30px;
+    margin-bottom: 5px;
+  }
+
+  &_form_container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 10px;
+
+    input {
+      border-radius: 15px;
+      height: 25px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_form_current {
+    display: flex;
+    flex-direction: column;
+  }
+}

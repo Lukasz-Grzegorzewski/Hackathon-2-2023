@@ -1,0 +1,35 @@
+.vehicule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    font-size: 15px;
+    margin: 15px;
+  }
+
+  &_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 4%;
+
+    &_detail {
+      background-color: $tertiary-color;
+      border-radius: 15px;
+    }
+
+    &_name,
+    &_kmH,
+    &_temps {
+      margin: 10px;
+      font-size: 1.5rem;
+    }
+
+    &_img {
+      width: 350px;
+      height: 250px;
+    }
+  }
+}
