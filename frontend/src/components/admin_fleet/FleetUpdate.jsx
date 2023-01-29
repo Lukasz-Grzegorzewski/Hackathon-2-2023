@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 function FleetUpdate({ vehicules }) {
   const [check, setCheck] = useState(false);
   const [vehiculesDetails, setVehiculesDetails] = useState({
-    id: "",
     kmH: "",
     name: "",
   });
